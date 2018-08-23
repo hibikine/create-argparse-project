@@ -1,0 +1,23 @@
+language: python
+python:
+  - '3.6'
+install:
+  - pip install -r requirements.txt
+script:
+  - pip install .
+  - create-argparse-project -n a -p a -a a -e a@a -u https://github.com/examples/a -d
+    a -c foo
+  - cd a
+  - pip install .
+  - foo
+deploy:
+  provider: pypi
+  user: HibikineKage
+  on:
+    repo: HibikineKage/create-argparse-project
+    branch: release/pypi
+    distributions: sdist --formats=gztar,zip
+    python: 3.6
+  allow_failure: false
+  password:
+    secure: HN3Z4QW967sQMIOnw8OOM6C6+ri8M8IMRumHwmAS1bxwPgsqN42BjDwJuaPGPiDRpLs3BxA3RD2kAq/9uhYIorufUP7597bt7pLRwDmg5D2qGhdb2WS5gGmK8vxpK+n0fKjs+rmjEezNR0g85DHrv0BzJRT5AdltRiPpGu1iYmmJbsI2OUS6MRTcr0gJptYbnOQWzlhNs52vCXd7Kwt0/lbHOhMBD+tF0qjLAAnvjS3TOdI+dW1URcSbrDBtesTkTbTtAcLD5Mg2WOQfNMBfsiFU7aZ9YoVrdrC3xmLImYT710QR7+CLeR/Z2AJWATa1PkcgZpbiELzdIjx5xWwPvMbzMvLEQUcff3MNfEzgAO9kd4U4i0yHruLGGAEFviwe8ceKit27XMengo0VI03sxrr8zMvTV+hoOOu22ERu9Sh4I0EnxDVC4g9rkKEA4ZxxwB8c3zR3v7lIECj227Z1EndbKTHSdFhluCPP4IBZ1jGRs7hEZTiIrZeoX4/WSn+O2x/fgf9XUIRQ9PYRF+azNIMRPfx5xlI0YM2plDgZbIZRuMog/3NXE1PF6iZsmNyklW3fSZYeevNE9qs5YRSzIfZqbJaT9DCt9mAEhycdWiFK4dBWXOeQvVa0uOy4rmv0pwIIsESVhal7Sh8zfz5Mamm3ZerN6cBoumYwVnhRy+Y=
