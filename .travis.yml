@@ -1,16 +1,16 @@
 language: python
 python:
-  - '3.6'
+- '3.6'
 install:
-  - pip install -r requirements.txt
+- pip install -r requirements.txt
 script:
-  - pip install .
-  - create-argparse-project -n a -p a -a a -e a@a -u https://github.com/examples/a -d
-    a -c foo
-  - cd a
-  - pip install .
-  - foo
-  - cd ..
+- pip install .
+- create-argparse-project -n a -p a -a a -e a@a -u https://github.com/examples/a -d
+  a -c foo
+- cd a
+- pip install .
+- foo
+- cd ..
 deploy:
   provider: pypi
   user: HibikineKage
@@ -21,4 +21,4 @@ deploy:
     python: 3.6
   allow_failure: false
   password:
-    secure: HN3Z4QW967sQMIOnw8OOM6C6+ri8M8IMRumHwmAS1bxwPgsqN42BjDwJuaPGPiDRpLs3BxA3RD2kAq/9uhYIorufUP7597bt7pLRwDmg5D2qGhdb2WS5gGmK8vxpK+n0fKjs+rmjEezNR0g85DHrv0BzJRT5AdltRiPpGu1iYmmJbsI2OUS6MRTcr0gJptYbnOQWzlhNs52vCXd7Kwt0/lbHOhMBD+tF0qjLAAnvjS3TOdI+dW1URcSbrDBtesTkTbTtAcLD5Mg2WOQfNMBfsiFU7aZ9YoVrdrC3xmLImYT710QR7+CLeR/Z2AJWATa1PkcgZpbiELzdIjx5xWwPvMbzMvLEQUcff3MNfEzgAO9kd4U4i0yHruLGGAEFviwe8ceKit27XMengo0VI03sxrr8zMvTV+hoOOu22ERu9Sh4I0EnxDVC4g9rkKEA4ZxxwB8c3zR3v7lIECj227Z1EndbKTHSdFhluCPP4IBZ1jGRs7hEZTiIrZeoX4/WSn+O2x/fgf9XUIRQ9PYRF+azNIMRPfx5xlI0YM2plDgZbIZRuMog/3NXE1PF6iZsmNyklW3fSZYeevNE9qs5YRSzIfZqbJaT9DCt9mAEhycdWiFK4dBWXOeQvVa0uOy4rmv0pwIIsESVhal7Sh8zfz5Mamm3ZerN6cBoumYwVnhRy+Y=
+    secure: Y5Geg9g6GeFIlzQAL02uwSATz/K/rdBNM1x9F+nen2Pg89EOffjLDqWJ7+qkgJEG8Y4+TX2Q9kGHXnbMMHYEntSB+P0tItkSt1bE9s8U+4X+KuBO0IPC2c6clOpW+meTy1cpP9oqIhYFOuthhQQsj5QgeWtb18rEwDKOWQFju5c076BObQ29PZr5FEk5nCLfKM2Zp247R6rHRY9t5E+r7SxqygSBDMraRZ3RMFQWPUJPnVytUbR6wUstrSHF7NccMrtDm5U2nTE2k/iQ6vXV/a5Q0Zzaelvl8hAjfV7l/HN/mCQGIbFfFE2Odu4KTfyA/xFXmGJAKk1j4FDlQbxD1DR+6gqHnCKYEJDrRL+v1r9HNPMskSyeA3BLi7pGLHK4CAXNLCIQGNpHnZJPb1ox9Jz0oN7ouLEn4UPO3jaaXo4Q6XtYhCyzh3dXmFeungCi3uZMBdcYWNxcGMZSP6DEvMlzo/b2qEeUrsB0RhYijCdjv9WJs3ySCzU7u4vRB0DBzm6CECUP4eGz0xXOOYB5etNPJRXlDg+kPhxKnvHGddbgl2YfMetCo8fzPNbXKvElPXF0HVXKivxglOcHunQV5aHuOpmCSbzTuot3Zk4xeEt8kZs9fFxkpFINRYRSSPgsezAfn8hXy9Vk22buP+pPc6VCAM4Qb53DSv2DAgamJ1E=
