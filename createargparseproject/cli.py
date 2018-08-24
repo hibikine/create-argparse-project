@@ -91,6 +91,9 @@ def main():
     print(' done.')
     print('')
     print('Finished.')
+    print('`cd {}` and `pip install --user .` to install the application.')
+    print('')
+    exit(0)
 
 
 if __name__ == '__main__':
