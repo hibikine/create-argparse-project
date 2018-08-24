@@ -1,25 +1,24 @@
 language: python
 python:
-  - '3.6'
+- '3.6'
 install:
-  - pip install -r requirements.txt
+- pip install -r requirements.txt
 script:
-  - pip install .
-  - create-argparse-project -n a -p a -a a -e a@a -u https://github.com/examples/a -d
-    a -c foo
-  - cd a
-  - pip install .
-  - foo
-  - cd ..
+- pip install .
+- create-argparse-project -n a -p a -a a -e a@a -u https://github.com/examples/a -d
+  a -c foo
+- cd a
+- pip install .
+- foo
+- cd ..
 deploy:
   provider: pypi
   user: HibikineKage
   on:
     repo: HibikineKage/create-argparse-project
     branch: release/pypi
-    distributions: sdist --formats=gztar,zip
     python: 3.6
-  allow_failure: false
+  distributions: sdist bdist_wheel
   server: https://test.pypi.org/legacy/
   password:
-    secure: e7M5slaDcQ+7e3/iWPc+qZ8f3a6RuQqsA5AnRg6Wh8I0Iseg8Rc9JQ42iflVLHcqr9mH5w/UmPznHpr1XgBQpWmwgHZM64NepSTF3kk19e4nv574ZOYsBkbMLFTyx5SsQhGpzT+MI6MPz9LOBaZZWgExsaUsaE2pgP2yIj/vAUwztdPTXfTIhV7/B4maJQR5tdwZ9M+Eax1VQSYFwcct0nLHyRAGNN9E7xBbiMmgPTkb9KQno/c0Ve1Och9Qcp521nB6cSJL4KiV+B+6+J2Y7pjCWGoHUCwkU/DkWg9ZR/KqagDalbB7D1mpV/Fk/ISkDBPq3qvPqXlwudlgtk8PcUuQeuBqcP1V12OTeMAV8t2spghUx7VKEeBHXZ4DGlIf7CQwx30pn3Q2T05DZfraVMXokY9ZY+pbMXybYTq9piONM09YNBhp8qWpc6bbKFDsjPmuXdNz1WCTn0PetNUGRI9EmmU7a0I/bVZwewR/QfH7RGLjk4J9LRBqjBUxQTynM8UgrvktCUaz10gTPztcM5N8wLgsWUIbQcd2PVSF2gggqkIeStVZmR2asw66dSevMiOW9YaJp00HJtxqtWSI3C7GS5bhYQWmXXEh0m25STla0VvlzAP8yoI0mnBGpGMIfYFmBpWVBz00nnNavgg0CR1CciFO0sNOtE3/t/c50AY=
+    secure: i5VGuvNPnpSRh/Fok7ak6lFz3TwW4hgz5YtulXnK0I/ycKCb2enPuV5TPgydP07EWtW5IgHYCZ+wgIZJ+DqTSXy9hH+Nt+6nTL7vH+YksUfvvX3wdFJsZp3QzamVmBTKfuRjtWDzVFPqXdu4AKb++iKIPLdBDFumSYCNfmXORTFNbeveMDZ0DsCsDV6dsHjlleui4neTmcRR2Q4hHxHAZS3rTLNSHZh3M11siBycSJ0OWY8mykTpD/fxx9NDAE49Q/JgAzcjLCBhnWMJsCuUoYZsM+9PlkVvrmBVodHcb3tJCX7XGx8oJIUBQtBZRJJN8zoIIQiL2athBUwtLwtXW7SQ6+33k2GtU3AWpmohH1ASr5j2eASmGaYwdZ31hHYhVqkCjWNZTHG3loGHdRZCCkgQCP7RKuxhEY+K0qUDJaqNfrvzwOi+Sgom6uMGkYK0c/xQXRPuR6poZjP41WJJuzcm2hePodTmD//uPUOvnY6c9cjW8DguOzLyxMqQL9wALzgzoXLHKs305SXS6kuK7D6pH7CJXSeadAG9UNQnnaQsEPE4DZ0icmHuyLuctDhUKofmuGFKgftXBgn7Mx7hiXvw99CiKnQjnG0h7L/0FImx5E2S/cBeC7Hchxr10I8kwY6nOD03NupBNUFnM58htN6tGamP/TR/qwBffYKzP/M=
